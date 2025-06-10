@@ -1,0 +1,171 @@
+/*================= Tags =================*/
+body {
+    font-family: "Montserat";
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat-Bold";
+}
+
+p {
+    color: #8f8f8f;
+}
+
+/*================= Heading =================*/
+.big-heading {
+    font-family: 'Montserat-Black, sans-serif';
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.5;
+}
+
+.section-heading {
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+/*============== Container Section ============*/
+.container-fuid {
+    padding: 7% 15%;
+}
+
+/*============== Section =================*/
+.colored-section {
+    background-color: #3C3D37;
+    color: #fff;
+}
+
+.white-section {
+    background-color: #fff;
+}
+
+/*=========== Tittle Section ================*/
+#title .container-fluid {
+    padding: 3% 15% 7%;
+    text-align: left;
+}
+
+/*================= Navigation bar =================*/
+.navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.navbar {
+    padding: 0 0 4.5rem;
+}
+
+.nav-item {
+    padding: 0 18px;
+}
+
+.nav-link {
+    font-family: "Montserat";
+    font-size: 1.2rem;
+}
+
+/*================= Title image =================*/
+.title-image {
+    width: 60%;
+    transform: rotate(25deg);
+    position: absolute;
+    right: 21%;
+}
+
+.download-button {
+    margin: 5% 3% 5% 0;
+}
+
+/*================= Feature Section =================*/
+#features {
+    
+    z-index: 1;
+    position: relative;
+}
+
+.feature-box {
+    padding: 5%;
+}
+
+.features-tittle {
+    font-size: 1.5rem;
+}
+
+.icon {
+    color: #697565;
+    margin-bottom: 1rem;
+}
+
+.icon:hover {
+    color: #181C14;
+}
+
+/*==================== Testimonials Section ===============*/
+.testimonial-text {
+    font-size: 2vw;
+    line-height: 1.5;
+}
+
+.testimonials-image {
+    width: 20%;
+    border-radius: 100%;
+    margin: 20px;
+}
+
+#press {
+    padding-bottom: 3%;
+}
+
+.press-logo {
+    width: 15%;
+    height: 100px;
+    margin: 20px 20px 50px;
+}
+
+/*======================== Pricing Section ==========================*/
+#pricing {
+    padding: 100px;
+}
+
+.price-text {
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.h2-pricing {
+    font-size: 3vw;
+    padding-bottom: 35px;
+}
+
+.pricing-column {
+    padding: 3% 2%;
+}
+
+.p-card {
+    padding-top: 20px;
+}
+
+/*==================== Footer ===================================*/
+.social-icon {
+    margin: 20px 10px;
+    color: rgb(77, 75, 75)
+}
+
+.social-icon:hover {
+    color: #000;                
+}
+
+/*=================== Responsividade ===========================*/
+@media (max-width: 1028px) {
+
+    #title {
+        text-align: center;
+    }
+
+    .title-image {
+        position: static;
+        transform: rotate(0);
+    }
+}
