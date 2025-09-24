@@ -6,7 +6,7 @@ function App() {
   const [items, setItems] = useState([]);
 
   function addItem(inputText) {
-    if(inputText === '')
+    if(inputText.trim() === '')
       alert("Campo vazio!");
     else {
       setItems( (prevItems) => {
