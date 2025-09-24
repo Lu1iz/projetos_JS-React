@@ -1,5 +1,5 @@
 body {
-  background-color: #494c5a;
+  background-color: #5b5c61;
   min-height: 70vh;
   padding: 1rem;
   box-sizing: border-box;
@@ -72,8 +72,24 @@ button span {
   border: 2px solid hsl(198, 1%, 29%);
 }
 
+.buttonCheck {
+  display: inline-block; /* deixa os botões na mesma linha */
+  margin: 5px;           /* espaço entre eles */
+  padding: 10px 20px;    /* tamanho interno */
+  border: none;
+  background-color: #434446;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.buttonCheck:hover {
+  background-color: #767777; /* efeito hover */
+}
+
 li {
   text-align: left;
   position: relative;
   padding: 0.5rem;
+  display: inline-block;
 }

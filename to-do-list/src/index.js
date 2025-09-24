@@ -5,9 +5,15 @@ import App from "./components/App";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
 
+//DESAFIO: Extraí a área de entrada, incluindo o <input> e
+//<button> elementos em um componente separado chamado InputArea.
+//Seu trabalho é fazer o aplicativo funcionar como antes, mas desta vez com o
+//InputArea como um componente separado.
 
-//DESAFIO: Faça esta aplicação funcionar aplicando o que você aprendeu.
-//1. Quando um novo texto é escrito na entrada, seu estado deve ser salvo.
-//2. Quando o botão adicionar é pressionado, os dados atuais na entrada devem ser
-//adicionado a um array.
-//3. O <ul> deve exibir todos os itens do array como <li>s
+// NÃO: Modifique o ToDoItem.jsx
+// NÃO: mova os elementos input/button de volta para o App.jsx
+
+//Dica 1: Você precisará pensar em como gerenciar o estado do elemento de entrada
+//em InputArea.jsx.
+//Dica 2: Você precisará pensar em como passar o valor de entrada de volta para
+//a função addItem() em App.jsx.

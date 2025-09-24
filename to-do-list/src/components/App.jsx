@@ -1,30 +1,40 @@
 import React, { useState } from "react";
-import TodoItems from "../components/TodoItems";
+import ToDoItem from "./ToDoItem";
+import InputArea from "./InputArea";
 
 function App() {
-
-  const [inputText, setInputText] = useState('');
   const [items, setItems] = useState([]);
 
-  function handleChange(event) {
-    const newValue = event.target.value;
-
-    setInputText(newValue);
-  };
-
-  function addItem() {
-    setItems( (prevItems) => {
-      return [...prevItems, inputText]
-    } )
-    setInputText('')
+  function addItem(inputText) {
+    if(inputText === '')
+      alert("Campo vazio!");
+    else {
+      setItems( (prevItems) => {
+        return [...prevItems, inputText]
+      } )
+    }
   }
 
   function deleteItem(id) {
-    setItems( (prevItem) => {
-      return prevItem.filter( (item, index) => {
-        return index !== id;
-      })
-    })
+    setItems( (prevItems) => {
+      return prevItems.filter(
+        (item, index) => {
+          return index !== id
+        }
+      )
+    } )
+  }
+
+  function updateItem(id) {
+    const newText = prompt('Digite o novo valor:');
+
+    if(newText) {
+      setItems( (prevItems) => 
+        prevItems.map( (item, index)  => 
+          index === id? newText : item
+        )
+      )
+    }
   }
 
   return (
@@ -32,16 +42,13 @@ function App() {
       <div className="heading">
         <h1>To-Do List</h1>
       </div>
-      <div className="form">
-        <input onChange={handleChange} type="text" value={inputText} />
-        <button onClick={addItem}>
-          <span>Adicionar</span>
-        </button>
-      </div>
+     
+      <InputArea onAdd={addItem}/>
+
       <div>
         <ul>
           {
-            items.map( (todoItem, index) => <TodoItems key={index} id={index} text={todoItem} onChecked={deleteItem}/>) 
+            items.map( (todoItem, index) => <ToDoItem key={index} id={index} text={todoItem} deleteItem={deleteItem} updateItem={updateItem} /> )
           }
         </ul>
       </div>
