@@ -7,7 +7,7 @@ const Register = () => {
     const [patientData, setPatientData] = useState({});
     const [currentId, setCurrentId] = useState('');
 
-    // 🔹 Carregar dados
+    // Carregar dados
     useEffect(() => {
         const pacientesRef = ref(db, 'pacientes');
         onValue(pacientesRef, (snapshot) => {
@@ -17,7 +17,7 @@ const Register = () => {
         });
     }, []);
 
-    // 🔹 Adicionar ou editar paciente
+    // Adicionar ou editar paciente
     const addEedit = async (obj) => {
         try {
             if (currentId === '') {
@@ -30,9 +30,11 @@ const Register = () => {
         } catch (error) {
             console.error("Erro ao adicionar ou editar paciente:", error);
         }
+
+        setCurrentId('');
     };
 
-    // 🔹 Remover paciente
+    // Remover paciente
     const deletePatient = async (key) => {
         if (window.confirm('Deseja realmente deletar esse cadastro?')) {
             try {
